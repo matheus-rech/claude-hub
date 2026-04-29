@@ -17,7 +17,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/', '/dist/', '/coverage/'],
   collectCoverageFrom: [
-    'src/**/*.{js,ts}',
+    'src/**/*.{js,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/types/**/*.ts',
     '!**/node_modules/**',
