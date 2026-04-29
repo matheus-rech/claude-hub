@@ -10,7 +10,7 @@ module.exports = {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
     '^.+\\.js$': 'babel-jest'
   },
-  moduleFileExtensions: ['ts', 'js', 'json'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   transformIgnorePatterns: ['node_modules/(?!(universal-user-agent|@octokit|before-after-hook)/)'],
   collectCoverage: true,
   coverageReporters: ['text', 'lcov'],
