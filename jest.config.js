@@ -1,5 +1,4 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
   setupFiles: ['<rootDir>/test/setup.js'],
   testMatch: [
@@ -8,6 +7,7 @@ module.exports = {
     '**/test/e2e/scenarios/**/*.test.{js,ts}'
   ],
   transform: {
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
     '^.+\\.ts$': 'ts-jest',
     '^.+\\.js$': 'babel-jest'
   },
