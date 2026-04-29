@@ -1,30 +1,23 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
   setupFiles: ['<rootDir>/test/setup.js'],
   testMatch: [
-    '**/test/unit/**/*.test.{js,ts}',
-    '**/test/integration/**/*.test.{js,ts}',
-    '**/test/e2e/scenarios/**/*.test.{js,ts}'
+    '**/test/unit/**/*.test.{js,ts,tsx}',
+    '**/test/integration/**/*.test.{js,ts,tsx}',
+    '**/test/e2e/scenarios/**/*.test.{js,ts,tsx}'
   ],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
     '^.+\\.js$': 'babel-jest'
   },
-  moduleFileExtensions: ['ts', 'js', 'json'],
-  transformIgnorePatterns: [
-    'node_modules/(?!(universal-user-agent|@octokit|before-after-hook)/)'
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+  transformIgnorePatterns: ['node_modules/(?!(universal-user-agent|@octokit|before-after-hook)/)'],
   collectCoverage: true,
   coverageReporters: ['text', 'lcov'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    '/dist/',
-    '/coverage/'
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/', '/dist/', '/coverage/'],
   collectCoverageFrom: [
-    'src/**/*.{js,ts}',
+    'src/**/*.{js,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/types/**/*.ts',
     '!**/node_modules/**',
