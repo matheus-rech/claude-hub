@@ -12,17 +12,11 @@ module.exports = {
     '^.+\\.js$': 'babel-jest'
   },
   moduleFileExtensions: ['ts', 'js', 'json'],
-  transformIgnorePatterns: [
-    'node_modules/(?!(universal-user-agent|@octokit|before-after-hook)/)'
-  ],
+  transformIgnorePatterns: ['node_modules/(?!(universal-user-agent|@octokit|before-after-hook)/)'],
   collectCoverage: true,
   coverageReporters: ['text', 'lcov'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    '/dist/',
-    '/coverage/'
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/', '/dist/', '/coverage/'],
   collectCoverageFrom: [
     'src/**/*.{js,ts}',
     '!src/**/*.d.ts',
