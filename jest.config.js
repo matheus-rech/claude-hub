@@ -2,9 +2,9 @@ module.exports = {
   testEnvironment: 'node',
   setupFiles: ['<rootDir>/test/setup.js'],
   testMatch: [
-    '**/test/unit/**/*.test.{js,ts}',
-    '**/test/integration/**/*.test.{js,ts}',
-    '**/test/e2e/scenarios/**/*.test.{js,ts}'
+    '**/test/unit/**/*.test.{js,ts,tsx}',
+    '**/test/integration/**/*.test.{js,ts,tsx}',
+    '**/test/e2e/scenarios/**/*.test.{js,ts,tsx}'
   ],
   transform: {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
